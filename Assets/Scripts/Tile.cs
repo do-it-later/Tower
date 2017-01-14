@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour {
         GROUND,
         PATH
     };
+    public bool occupiedByTower_ = false;
     public tileType type_ = tileType.GROUND;
 
     public void setTile(tileType type)

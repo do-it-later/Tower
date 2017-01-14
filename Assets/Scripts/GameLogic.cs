@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour {
 
+    public GameObject towerPreFab;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -16,14 +18,15 @@ public class GameLogic : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null)
+            if (hit.collider != null && hit.collider.tag == "tile")
             {
-                if (hit.collider.tag == "tile")
+                Tile currentTile = hit.collider.gameObject.GetComponent<Tile>();
+                if (currentTile.type_ == Tile.tileType.GROUND && !currentTile.occupiedByTower_)
                 {
-                    Debug.Log("Target Position: " + hit.collider.gameObject.GetComponent<Tile>().type_);
+                    GameObject tower = Instantiate(towerPreFab, hit.collider.gameObject.transform.position, Quaternion.identity) as GameObject;
+                    currentTile.occupiedByTower_ = true;
                 }
             }
         }
-
     }
 }
