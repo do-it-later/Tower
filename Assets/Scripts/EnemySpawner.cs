@@ -6,14 +6,16 @@ public class EnemySpawner : MonoBehaviour {
 
 	public GameObject[] enemies;
 	public GameObject[] waypoints;
-	public float spawnSpeed = 1.0f;
+	public float spawnSpeed = 0.3f;
 
 	private float lastSpawnedTime = 0;
-	private int chance = 30;
+	private int baseChance = 10;
+	private int prngIncrease = 1;
+	private int chance;
 
 	// Use this for initialization
 	void Start () {
-		
+		chance = baseChance;
 	}
 	
 	// Update is called once per frame
@@ -24,10 +26,10 @@ public class EnemySpawner : MonoBehaviour {
 				var enemy = Instantiate (enemies [Random.Range (0, enemies.Length - 1)]) as GameObject;
 				enemy.transform.position = transform.position;
 				enemy.GetComponent<Enemy> ().waypoints = waypoints;
-				spawnSpeed = Mathf.Max (0.2f, spawnSpeed - 0.01f);
-				chance = 30;
+				chance = baseChance;
+				prngIncrease += 1;
 			} else {
-				chance += 15;
+				chance += prngIncrease;
 			}
 
 			lastSpawnedTime = Time.time;

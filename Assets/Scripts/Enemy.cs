@@ -13,16 +13,18 @@ public class Enemy : MonoBehaviour {
 	private Animator animator;
 	private bool isDead = false;
 	public bool IsDead { get { return isDead; } }
+	private bool hasSpawned = false;	
 
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
 		movementDirection = (waypoints [index].transform.position - gameObject.transform.position).normalized;
+		StartCoroutine (Spawn ());
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (!isDead) {
+		if (!isDead && hasSpawned) {
 			transform.position += movementDirection * speed * Time.deltaTime;
 		}
 	}
@@ -50,5 +52,11 @@ public class Enemy : MonoBehaviour {
 				Destroy (gameObject, animator.GetCurrentAnimatorStateInfo(0).length);
 			}
 		}
+	}
+
+	private IEnumerator Spawn() {
+		yield return new WaitForSeconds (animator.GetCurrentAnimatorStateInfo(0).length);
+		GetComponent<Collider2D>().enabled = true;
+		hasSpawned = true;
 	}
 }
