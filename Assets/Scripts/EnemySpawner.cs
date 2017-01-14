@@ -23,6 +23,5 @@ public class EnemySpawner : MonoBehaviour {
 			enemy.GetComponent<WaypointMovement>().waypoints = waypoints;
 			lastSpawnedTime = Time.time;
 		}
-		
 	}
 }

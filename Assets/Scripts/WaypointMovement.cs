@@ -21,7 +21,6 @@ public class WaypointMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
-		Debug.Log (collider);
 		if (collider.tag == "waypoint") {
 			index++;
 
