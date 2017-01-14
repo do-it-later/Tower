@@ -22,6 +22,8 @@ public class Tower : MonoBehaviour {
 	}
 
 	void SpawnBullet () {
+		target = null;
+
 		foreach (Collider2D col in Physics2D.OverlapCircleAll(transform.position, searchRadius)) {
 			if (col.tag == "enemy") {
 				target = col.gameObject;

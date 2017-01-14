@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4889874309607218}
   - component: {fileID: 212266006108635658}
   - component: {fileID: 114697600093974916}
+  - component: {fileID: 95219494322830528}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -41,6 +42,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &95219494322830528
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1171064264735996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ded09387fbae74647a8d4056e44a8f6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114697600093974916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,6 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a174f125e1821484dad2f847dd9caf5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 1568011048898944, guid: 142335607b74f419db1184b4c3b88718, type: 2}
+  bulletSpeed: 1
+  searchRadius: 3
+  fireRate: 0.75
 --- !u!212 &212266006108635658
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -83,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.034482718, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b4fdd85dcc1a844dcab843ef475586bb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
