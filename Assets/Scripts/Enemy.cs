@@ -26,6 +26,15 @@ public class Enemy : MonoBehaviour {
 	void Update () {
 		if (!isDead && hasSpawned) {
 			transform.position += movementDirection * speed * Time.deltaTime;
+
+			if(movementDirection.x < 0)
+			{
+				this.GetComponent<SpriteRenderer>().flipX = true;
+			}
+			else
+			{
+				this.GetComponent<SpriteRenderer>().flipX = false;
+			}
 		}
 	}
 

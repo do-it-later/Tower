@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77e7c1882a36c44b92dee64e69a3b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerPreFab: {fileID: 1171064264735996, guid: c973e43c0f9314840b30d0929b4e152a,
+    type: 2}
 --- !u!4 &319785611
 Transform:
   m_ObjectHideFlags: 0

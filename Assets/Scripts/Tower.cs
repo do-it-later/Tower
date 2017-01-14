@@ -15,11 +15,6 @@ public class Tower : MonoBehaviour {
 	void Start () {
 		InvokeRepeating ("SpawnBullet", fireRate, fireRate);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	void SpawnBullet () {
 		target = null;
