@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour {
         GROUND,
         PATH
     };
+    public tileType type_ = tileType.GROUND;
 
     public void setTile(tileType type)
     {
@@ -16,10 +17,12 @@ public class Tile : MonoBehaviour {
         {
             case tileType.GROUND:
                 gameObject.GetComponent<SpriteRenderer>().sprite = tile_ground;
+                type_ = tileType.GROUND;
             break;
             case tileType.PATH:
                 gameObject.GetComponent<SpriteRenderer>().sprite = tile_path;
-            break;
+                type_ = tileType.PATH;
+                break;
         }
     }
 }
