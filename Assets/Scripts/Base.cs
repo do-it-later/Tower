@@ -12,7 +12,7 @@ public class Base : MonoBehaviour {
 	void Start()
 	{
 		isDead = false;
-		health = 1;
+		health = 20;
 
 		animator = this.GetComponent<Animator>();
 	}

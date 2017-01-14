@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   waypoints: []
-  speed: 5
+  speed: 2
 --- !u!212 &212718086571460326
 SpriteRenderer:
   m_ObjectHideFlags: 1
