@@ -4,7 +4,6 @@ using System.Text;
 using System.IO;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class LevelManager : MonoBehaviour {
 	public GameObject tilePrefab;
 	public string filename;

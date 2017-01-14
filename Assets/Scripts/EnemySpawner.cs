@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour {
 			if (ran < chance) {
 				var enemy = Instantiate (enemies [Random.Range (0, enemies.Length - 1)]) as GameObject;
 				enemy.transform.position = transform.position;
+				enemy.transform.parent = this.transform;
 				enemy.GetComponent<Enemy> ().waypoints = waypoints;
 				chance = baseChance;
 				prngIncrease += 1;

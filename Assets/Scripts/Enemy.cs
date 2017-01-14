@@ -43,7 +43,6 @@ public class Enemy : MonoBehaviour {
 			index++;
 
 			if (index == waypoints.Length) {
-				Debug.Log ("Hit the end");
 				Destroy (gameObject);
 			} else {
 				movementDirection = (waypoints [index].transform.position - gameObject.transform.position).normalized;
