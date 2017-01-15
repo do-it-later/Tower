@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
 	public GameObject tilePrefab;
+	public GameObject basePrefab;
 	public string filename;
 	public int levelWidth { get; private set; }
 	public int levelHeight { get; private set; }
@@ -61,6 +62,11 @@ public class LevelManager : MonoBehaviour {
 				{
 				case 'P':
 					tile.GetComponent<Tile>().setTile(Tile.tileType.PATH);
+					break;
+				case 'B':
+					tile.GetComponent<Tile>().setTile(Tile.tileType.PATH);
+					GameObject baseObj = Instantiate(basePrefab, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
+					baseObj.GetComponent<SpriteRenderer>().sortingOrder = levelHeight - (int)y;
 					break;
 				default:
 					tile.GetComponent<Tile>().setTile(Tile.tileType.GROUND);

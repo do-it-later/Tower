@@ -403,49 +403,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1641942815464202, guid: fafc42d0d2f551741a52a197d47b9a80, type: 2}
+  basePrefab: {fileID: 1453084718281752, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
   filename: Assets/Levels/Level1.txt
---- !u!1001 &1528557653
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248831426568578, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 3b26cad11abf64d37a2dcc1cc7dae78c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1540600772 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1606356070421580, guid: f3f17d76dda05475eab5bd9e90f819eb,
