@@ -14,14 +14,21 @@ public class Bullet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (target.GetComponent<Enemy>().IsDead) {
-			Destroy (gameObject);
-		} else {
-			transform.position = Vector3.MoveTowards (transform.position, target.transform.position, 5.0f * Time.deltaTime);
+		if(target == null)
+		{
+			Destroy(gameObject);
 		}
+		else
+		{
+			if (target.GetComponent<Enemy>().IsDead) {
+				Destroy (gameObject);
+			} else {
+				transform.position = Vector3.MoveTowards (transform.position, target.transform.position, 5.0f * Time.deltaTime);
+			}
 
-		if (Time.time - spawnTime > 3) {
-			Destroy (gameObject);
+			if (Time.time - spawnTime > 3) {
+				Destroy (gameObject);
+			}
 		}
 	}
 
